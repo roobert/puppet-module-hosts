@@ -144,8 +144,7 @@ class hosts (
   }
 
   if $host_entries != undef {
-    $host_entries_real = delete($host_entries,$::fqdn)
-    validate_hash($host_entries_real)
-    create_resources(host,$host_entries_real)
+    validate_hash($host_entries)
+    create_resources(host,$host_entries)
   }
 }
